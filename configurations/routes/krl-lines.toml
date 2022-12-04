@@ -13,3 +13,11 @@ StationIDs = [201, 202, 203, 204]
 OperationalStart = "05:00"
 OperationalStop = "22:00"
 Trains = 3
+
+[[line]]
+ID = 4
+Name = "KRL Bogor Line"
+StationIDs = [204, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424]
+OperationalStart = "04:00"
+OperationalStop = "23:00"
+Trains = 12

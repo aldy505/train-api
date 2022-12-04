@@ -3,7 +3,7 @@ ID = 201
 Name = "Tanjung Priok"
 Latitude = -6.1109487
 Longitude = 106.8810977
-TrainWaitingTime = "45s"
+TrainWaitingTime = "30s"
 
 [[station]]
 ID = 202
@@ -24,4 +24,4 @@ ID = 204
 Name = "Jakarta Kota"
 Latitude = -6.1375817
 Longitude = 106.8147052
-TrainWaitingTime = "45s"
+TrainWaitingTime = "60s"

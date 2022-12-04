@@ -1,0 +1,160 @@
+[[station]]
+ID = 401
+Name = "Jayakarta"
+Latitude = -6.1412465
+Longitude = 106.823077
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 402
+Name = "Mangga Besar"
+Latitude = -6.1498193
+Longitude = 106.8269222
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 403
+Name = "Sawah Besar"
+Latitude = -6.1607662
+Longitude = 106.827463
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 405
+Name = "Juanda"
+Latitude = -6.166758
+Longitude = 106.830379
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 406
+Name = "Gondangdia"
+Latitude = -6.1861686
+Longitude = 106.8325889
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 407
+Name = "Cikini"
+Latitude = -6.1985623
+Longitude = 106.841179
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 408
+Name = "Manggarai"
+Latitude = -6.2101941
+Longitude = 106.849954
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 409
+Name = "Tebet"
+Latitude = -6.2262136
+Longitude = 106.8583122
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 410
+Name = "Cawang"
+Latitude = -6.2425104
+Longitude = 106.8584982
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 411
+Name = "Duren Kalibata"
+Latitude = -6.2553552
+Longitude = 106.8550287
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 412
+Name = "Pasar Minggu Baru"
+Latitude = -6.2627591
+Longitude = 106.8518294
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 413
+Name = "Pasar Minggu"
+Latitude = -6.2842593
+Longitude = 106.8445845
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 414
+Name = "Tanjung Barat"
+Latitude = -6.3078677
+Longitude = 106.8388795
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 415
+Name = "Lenteng Agung"
+Latitude = -6.3304797
+Longitude = 106.8347248
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 416
+Name = "Universitas Pancasila"
+Latitude = -6.3389485
+Longitude = 106.8344528
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 417
+Name = "Universitas Indonesia"
+Latitude = -6.3607742
+Longitude = 106.8317206
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 418
+Name = "Pondok Cina"
+Latitude = -6.369074
+Longitude = 106.8320722
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 419
+Name = "Depok Baru"
+Latitude = -6.3910884
+Longitude = 106.8216485
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 420
+Name = "Depok"
+Latitude = -6.4052437
+Longitude = 106.8170591
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 421
+Name = "Citayam"
+Latitude = -6.4487799
+Longitude = 106.8023654
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 422
+Name = "Bojong Gede"
+Latitude = -6.4932087
+Longitude = 106.7948137
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 423
+Name = "Cilebut"
+Latitude = -6.5305083
+Longitude = 106.8005593
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 424
+Name = "Bogor"
+Latitude = -6.595447
+Longitude = 106.7905697
+TrainWaitingTime = "60s"
