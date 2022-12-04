@@ -1,0 +1,76 @@
+[[station]]
+ID = 101
+Name = "Tangerang"
+Latitude = -6.1768215
+Longitude = 106.6326461
+TrainWaitingTime = "60s"
+
+[[station]]
+ID = 102
+Name = "Tanah Tinggi"
+Latitude = -6.1754392
+Longitude = 106.6453816
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 103
+Name = "Batu Ceper"
+Latitude = -6.1722477
+Longitude = 106.6650517
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 104
+Name = "Poris"
+Latitude = -6.1699536
+Longitude = 106.6799196
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 105
+Name = "Kali Deres"
+Latitude = -6.1661003
+Longitude = 106.7037024
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 106
+Name = "Rawa Buaya"
+Latitude = -6.1627418
+Longitude = 106.7235837
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 107
+Name = "Bojong Indah"
+Latitude = -6.1605044
+Longitude = 106.7351905
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 108
+Name = "Taman Kota"
+Latitude = -6.1584864
+Longitude = 106.7559111
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 109
+Name = "Pesing"
+Latitude = -6.1613545
+Longitude = 106.7722047
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 110
+Name = "Grogol"
+Latitude = -6.1621265
+Longitude = 106.7892543
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 111
+Name = "Duri"
+Latitude = -6.155296
+Longitude = 106.8013581
+TrainWaitingTime = "60s"

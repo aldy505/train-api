@@ -1,0 +1,27 @@
+[[station]]
+ID = 201
+Name = "Tanjung Priok"
+Latitude = -6.1109487
+Longitude = 106.8810977
+TrainWaitingTime = "45s"
+
+[[station]]
+ID = 202
+Name = "Ancol"
+Latitude = -6.1281053
+Longitude = 106.8451143
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 203
+Name = "Kampung Bandan"
+Latitude = -6.1328688
+Longitude = 106.828524
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 204
+Name = "Jakarta Kota"
+Latitude = -6.1375817
+Longitude = 106.8147052
+TrainWaitingTime = "45s"

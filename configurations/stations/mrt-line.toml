@@ -1,0 +1,95 @@
+[[station]]
+ID = 300
+Name = "Lebak Bulus Grab"
+Latitude = -6.2893413
+Longitude = 106.7743845
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 301
+Name = "Fatmawati"
+Latitude = -6.2924534
+Longitude = 106.7924599
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 302
+Name = "Cipete Raya"
+Latitude = -6.278266
+Longitude = 106.7972346
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 303
+Name = "Haji Nawi"
+Latitude = -6.2667022
+Longitude = 106.7973112
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 304
+Name = "Blok A"
+Latitude = -6.2557705
+Longitude = 106.7971253
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 305
+Name = "Blok M BCA"
+Latitude = -6.2447627
+Longitude = 106.7981417
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 306
+Name = "ASEAN"
+Latitude = -6.2390826
+Longitude = 106.7984823
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 307
+Name = "Senayan"
+Latitude = -6.226751
+Longitude = 106.802426
+TrainWaitingTime = "30s"
+
+[[station]]
+ID = 308
+Name = "Istora Mandiri"
+Latitude = -6.222394
+Longitude = 106.8085691
+TrainWaitingTime = "30s"
+
+
+[[station]]
+ID = 309
+Name = "Bendungan Hilir"
+Latitude = -6.2150339
+Longitude = 106.8179344
+TrainWaitingTime = "30s"
+
+
+[[station]]
+ID = 310
+Name = "Setiabudi Astra"
+Latitude = -6.2089861
+Longitude = 106.8217233
+TrainWaitingTime = "30s"
+
+
+[[station]]
+ID = 311
+Name = "Dukuh Atas BNI"
+Latitude = -6.2008663
+Longitude = 106.8231439
+TrainWaitingTime = "30s"
+
+
+[[station]]
+ID = 312
+Name = "Bundaran HI"
+Latitude = -6.191864
+Longitude = 106.823024
+TrainWaitingTime = "30s"
+
