@@ -4,4 +4,4 @@ Name = "MRT Line"
 StationIDs = [300, 301, 302, 303, 304, 305, 307, 308, 309, 310, 311]
 OperationalStart = "05:00"
 OperationalStop = "22:00"
-Trains = 8
+Trains = 6

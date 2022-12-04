@@ -1,0 +1,6 @@
+GET http://localhost:5000/trains
+Accept: application/json
+
+###
+GET http://localhost:5000/trains?id=100
+Accept: application/json

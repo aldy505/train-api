@@ -23,14 +23,14 @@ func NewWorker(line *Line) *Worker {
 func (w *Worker) Start() error {
 	for i, train := range w.line.Trains {
 		go func(index int, train *Train) {
-			log.Printf("Deploying a train for %s", w.line.Name)
+			log.Printf("[%s] Deploying a train", w.line.Name)
 			w.startTrain(train)
 		}(i, train)
 
-		time.Sleep(time.Minute * 4)
+		time.Sleep(time.Minute * 5)
 	}
 
-	log.Printf("All train for %s has been deployed", w.line.Name)
+	log.Printf("[%s] All train has been deployed", w.line.Name)
 
 	return nil
 }
@@ -115,17 +115,16 @@ func (w *Worker) startTrain(train *Train) {
 
 			w.line.Stations[nextStationIndex].NextSchedule[nextScheduleIndex].TrainId = train.ID
 			w.line.Stations[nextStationIndex].NextSchedule[nextScheduleIndex].Arrival = nextStationArrivalTime
-			w.line.Stations[nextStationIndex].NextSchedule[nextScheduleIndex].Departing = nextStationArrivalTime.Add(w.line.Stations[nextStationIndex].TrainWaitingTime)
+			w.line.Stations[nextStationIndex].NextSchedule[nextScheduleIndex].Departure = nextStationArrivalTime.Add(w.line.Stations[nextStationIndex].TrainWaitingTime)
 
 			train.Lock()
 			train.Direction = nextDirection
-			train.TotalPassengers = rand.Int31n(300)
+			train.TotalPassengers = rand.Int31n(300) + 1
 			train.StoppingAtStation = false
 			train.DestinationStationId = w.line.Stations[nextStationIndex].ID
 			train.Unlock()
 
 			log.Printf("[%s] Train ID %d has departed from station %s bound for %s", w.line.Name, train.ID, w.line.Stations[currentStationIndex].Name, w.line.Stations[nextStationIndex].Name)
-
 		}
 
 		time.Sleep(time.Millisecond * 100)
@@ -147,12 +146,16 @@ func (w *Worker) startTrain(train *Train) {
 }
 
 func getNextStationIndex(stations []*Station, currentIndex int, direction TrainDirection) (int, TrainDirection) {
-	if len(stations)-1 == currentIndex {
-		return currentIndex - 1, TrainDirectionDown
+	if len(stations)-1 == currentIndex && direction == TrainDirectionUp {
+		return currentIndex, TrainDirectionDown
 	}
 
 	if direction == TrainDirectionUp {
 		return currentIndex + 1, TrainDirectionUp
+	}
+
+	if currentIndex == 0 {
+		return 0, TrainDirectionUp
 	}
 
 	return currentIndex - 1, TrainDirectionDown

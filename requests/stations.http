@@ -1,0 +1,6 @@
+GET http://localhost:5000/stations
+Accept: application/json
+
+###
+GET http://localhost:5000/stations?id=1
+Accept: application/json

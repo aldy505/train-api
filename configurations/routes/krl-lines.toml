@@ -4,7 +4,7 @@ Name = "KRL Tangerang Line"
 StationIDs = [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111]
 OperationalStart = "04:00"
 OperationalStop = "23:59"
-Trains = 10
+Trains = 7
 
 [[line]]
 ID = 2
@@ -12,4 +12,4 @@ Name = "KRL Tanjung Priok Line"
 StationIDs = [201, 202, 203, 204]
 OperationalStart = "05:00"
 OperationalStop = "22:00"
-Trains = 5
+Trains = 3

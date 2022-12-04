@@ -6,7 +6,7 @@ type StationSchedule struct {
 	TrainId   int
 	LineId    int
 	Arrival   time.Time
-	Departing time.Time
+	Departure time.Time
 	Direction TrainDirection
 }
 

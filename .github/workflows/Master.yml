@@ -1,0 +1,23 @@
+name: CI
+
+on:
+    push:
+        branches: ["master"]
+
+jobs:
+    api:
+        name: API
+        runs-on: ubuntu-latest
+        container: golang:1
+        timeout-minutes: 15
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Build
+              run: go build .
+
+            - name: Run test & coverage
+              run: go test -v -race -coverprofile=coverage.out -covermode=atomic ./...
+
+            - uses: codecov/codecov-action@v3
