@@ -12,6 +12,8 @@ WORKDIR /app
 
 COPY --from=builder /app/* .
 
+RUN apt-get update -y && apt-get install -y curl gzip
+
 ENV HTTP_HOSTNAME="0.0.0.0"
 ENV HTTP_PORT="5000"
 
