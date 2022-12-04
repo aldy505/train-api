@@ -10,7 +10,8 @@ FROM debian:bullseye AS runtime
 
 WORKDIR /app
 
-COPY --from=builder /app/* .
+COPY --from=builder /app/train-api .
+COPY configurations .
 
 RUN apt-get update -y && apt-get install -y curl gzip
 
