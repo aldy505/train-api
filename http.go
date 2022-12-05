@@ -50,27 +50,27 @@ The endpoints are pretty simple, you are most welcome to open a PR
 and submit a new endpoint in case you need them:
 
 	### Get all lines
-	GET http://localhost:5000/lines
+	GET https://train.reinaldyrafli.com/lines
 	Accept: application/json
 
 	### Get lines by ID
-	GET http://localhost:5000/lines?id=1
+	GET https://train.reinaldyrafli.com/lines?id=1
 	Accept: application/json
 
 	### Get all stations
-	GET http://localhost:5000/stations
+	GET https://train.reinaldyrafli.com/stations
 	Accept: application/json
 
 	### Get station by ID
-	GET http://localhost:5000/stations?id=1
+	GET https://train.reinaldyrafli.com/stations?id=1
 	Accept: application/json
 
 	### Get all trains
-	GET http://localhost:5000/trains
+	GET https://train.reinaldyrafli.com/trains
 	Accept: application/json
 
 	### Get trains by ID
-	GET http://localhost:5000/trains?id=100
+	GET https://train.reinaldyrafli.com/trains?id=100
 	Accept: application/json
 
 ## License
@@ -79,14 +79,14 @@ and submit a new endpoint in case you need them:
 
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
-		You may obtain a copy of the License at
+	You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+		http://www.apache.org/licenses/LICENSE-2.0
 
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
-		WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-		See the License for the specific language governing permissions and
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
 	limitations under the License.
 `))
 }

@@ -17,31 +17,31 @@ I AM NOT RESPONSIBLE FOR ANY ABUSE IN THE NAME OF USING THIS PROGRAM.
 NOR I DO NOT GAIN ANY MONEY FROM CREATING THIS PROGRAM.
 
 The endpoints are pretty simple, you are most welcome to open a PR
-and submit a new endpoint in case you need them:
+and submit a new endpoint or even a feature in case you need them:
 
 ```http request
 ### Get all lines
-GET http://localhost:5000/lines
+GET https://train.reinaldyrafli.com/lines
 Accept: application/json
 
 ### Get lines by ID
-GET http://localhost:5000/lines?id=1
+GET https://train.reinaldyrafli.com/lines?id=1
 Accept: application/json
 
 ### Get all stations
-GET http://localhost:5000/stations
+GET https://train.reinaldyrafli.com/stations
 Accept: application/json
 
 ### Get station by ID
-GET http://localhost:5000/stations?id=1
+GET https://train.reinaldyrafli.com/stations?id=1
 Accept: application/json
 
 ### Get all trains
-GET http://localhost:5000/trains
+GET https://train.reinaldyrafli.com/trains
 Accept: application/json
 
 ### Get trains by ID
-GET http://localhost:5000/trains?id=100
+GET https://train.reinaldyrafli.com/trains?id=100
 Accept: application/json
 ```
 

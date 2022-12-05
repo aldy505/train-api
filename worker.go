@@ -2,7 +2,6 @@ package main
 
 import (
 	"log"
-	"math"
 	"math/rand"
 	"time"
 
@@ -43,6 +42,7 @@ func (w *Worker) startTrain(train *Train) {
 				train.Lock()
 				train.OutOfService = true
 				train.Unlock()
+
 				log.Printf("[%s] Train ID %d has been marked as out of service", w.line.Name, train.ID)
 				time.Sleep(time.Hour * 23)
 			}
@@ -56,6 +56,7 @@ func (w *Worker) startTrain(train *Train) {
 	var nextDirection TrainDirection
 	var currentTimeSecondIndex float64 = 0
 	var nextStationArrivalTime time.Time
+	var tripTimeToNextStation float64 = 0
 
 	train.CurrentLatitude = w.line.Stations[0].Latitude
 	train.CurrentLongitude = w.line.Stations[0].Longitude
@@ -102,7 +103,8 @@ func (w *Worker) startTrain(train *Train) {
 				haversine.NewCoordinate(w.line.Stations[nextStationIndex].Latitude, w.line.Stations[nextStationIndex].Longitude),
 			)
 
-			nextStationArrivalTime = measureArrivalTime(distance)
+			tripTimeToNextStation = measureTripTime(distance)
+			nextStationArrivalTime = time.Now().Add(time.Second * time.Duration(tripTimeToNextStation))
 
 			var nextScheduleIndex int
 			for i, schedule := range w.line.Stations[nextStationIndex].NextSchedule {
@@ -131,6 +133,7 @@ func (w *Worker) startTrain(train *Train) {
 		currentTimeSecondIndex += 0.1
 		latitude, longitude := measureCurrentCoordinate(
 			currentTimeSecondIndex,
+			tripTimeToNextStation,
 			w.line.Stations[currentStationIndex].Latitude, w.line.Stations[currentStationIndex].Longitude,
 			w.line.Stations[nextStationIndex].Latitude, w.line.Stations[nextStationIndex].Longitude)
 
@@ -161,20 +164,15 @@ func getNextStationIndex(stations []*Station, currentIndex int, direction TrainD
 	return currentIndex - 1, TrainDirectionDown
 }
 
-func measureArrivalTime(distanceKm float64) time.Time {
-	t := distanceKm / 0.0138888889 // 50 km/hours in km/second
-
-	return time.Now().Add(time.Second * time.Duration(t))
+func measureTripTime(distanceKm float64) float64 {
+	return distanceKm / 0.0138888889 // 50 km/hours in km/second
 }
 
-func measureCurrentCoordinate(secondIndex float64, initialLatitude float64, initialLongitude float64, destinationLatitude float64, destinationLongitude float64) (latitude float64, longitude float64) {
+func measureCurrentCoordinate(elapsedTime float64, totalTime float64, initialLatitude float64, initialLongitude float64, destinationLatitude float64, destinationLongitude float64) (latitude float64, longitude float64) {
+	dx := destinationLongitude - initialLongitude
 	dy := destinationLatitude - initialLatitude
-	dx := math.Cos(initialLatitude) * (destinationLongitude - initialLongitude)
-	angle := math.Atan2(dy, dx)
 
-	vy := 0.0138888889 * math.Sin(angle)
-	vx := 0.0138888889 * math.Cos(angle)
-	latitude = initialLatitude + (vy * secondIndex)
-	longitude = initialLongitude + (vx * secondIndex)
+	longitude = initialLongitude + elapsedTime/totalTime*dx
+	latitude = initialLatitude + elapsedTime/totalTime*dy
 	return
 }
