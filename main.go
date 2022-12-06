@@ -36,11 +36,9 @@ func main() {
 		log.Fatalf("parsing routes configuration: %s", err.Error())
 	}
 
-	var trains []*Train
 	var lines []*Line
 	for i, route := range routes {
 		trainForRoute := GenerateTrains(route.Trains, 100*(i+1), route.ID, 0, 0)
-		trains = append(trains, trainForRoute...)
 
 		line, err := MapStationsToLine(route, stations, trainForRoute)
 		if err != nil {

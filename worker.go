@@ -65,24 +65,37 @@ func (w *Worker) startTrain(train *Train) {
 
 	for {
 		if clock.Now().Before(w.line.OperationalStart) {
-			time.Sleep(
-				time.Now().
-					Sub(time.Date(
-						time.Now().Year(),
-						time.Now().Month(),
-						time.Now().Day(),
-						w.line.OperationalStart.Hour,
-						w.line.OperationalStart.Minute,
-						w.line.OperationalStart.Second,
-						0,
-						time.Local)))
+			sleepDuration := time.Since(time.Date(
+				time.Now().Year(),
+				time.Now().Month(),
+				time.Now().Day(),
+				w.line.OperationalStart.Hour,
+				w.line.OperationalStart.Minute,
+				w.line.OperationalStart.Second,
+				0,
+				time.Local))
+
+			log.Printf("[%s] Train ID %d will be sleeping for %s", w.line.Name, train.ID, sleepDuration.String())
+			time.Sleep(sleepDuration)
 
 			train.OutOfService = false
 			train.StoppingAtStation = true
+
+			log.Printf("[%s] Train ID %d is back on service", w.line.Name, train.ID)
+		}
+
+		if clock.Now().After(w.line.OperationalStop) {
+			time.Sleep(time.Minute * 30)
+			continue
 		}
 
 		if train.OutOfService && currentStationIndex == 0 {
-			time.Sleep(time.Minute * 30)
+			train.Lock()
+			train.TotalPassengers = 0
+			train.StoppingAtStation = false
+			nextStationIndex = -1
+			nextStationArrivalTime = time.Time{}
+			train.Unlock()
 			continue
 		}
 
